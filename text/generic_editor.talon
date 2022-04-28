@@ -10,16 +10,16 @@ go word left:
 go word right:
     edit.word_right()
 
-go left:
+left:
     edit.left()
 
-go right:
+right:
     edit.right()
 
-go up:
+up:
     edit.up()
 
-go down:
+down:
     edit.down()
 
 go line start:
@@ -121,7 +121,7 @@ clear down:
 clear word:
     edit.delete_word()
 
-clear word left:
+(clear word left | redact):
     edit.extend_word_left()
     edit.delete()
 

@@ -1,7 +1,8 @@
-#(jay son | jason ): "json"
-#(http | htp): "http"
+(jay son | jason ): "json"
+(http | htp): "http"
 #tls: "tls"
-#M D five: "md5"
+M D five: "md5"
+C S V: "csv"
 #word (regex | rejex): "regex"
 #word queue: "queue"
 #word eye: "eye"
@@ -15,11 +16,11 @@ zoom out: edit.zoom_out()
 zoom reset: edit.zoom_reset()
 scroll up: edit.page_up()
 scroll down: edit.page_down()
-copy that: edit.copy()
-cut that: edit.cut()
-paste that: edit.paste()
-undo that: edit.undo()
-redo that: edit.redo()
+copy: edit.copy()
+cut: edit.cut()
+pasty: edit.paste()
+undo: edit.undo()
+redo: edit.redo()
 paste match: edit.paste_match_style()
 file save: edit.save()
 wipe: key(backspace)
