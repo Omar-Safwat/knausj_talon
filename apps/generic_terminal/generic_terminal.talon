@@ -2,9 +2,9 @@ tag: terminal
 -
 # tags should be activated for each specific terminal in the respective talon file
 
-lisa:
+lisa less:
     user.terminal_list_directories()
-lisa all:
+lisa:
     user.terminal_list_all_directories()
 katie [<user.text>]: user.terminal_change_directory(text or "")
 katie root: user.terminal_change_directory_root()
