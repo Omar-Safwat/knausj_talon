@@ -4,30 +4,6 @@ find it:
 next one:
     edit.find_next()
 
-go word left:
-    edit.word_left()
-
-go word right:
-    edit.word_right()
-
-left:
-    edit.left()
-
-right:
-    edit.right()
-
-up:
-    edit.up()
-
-down:
-    edit.down()
-
-go line start:
-    edit.line_start()
-
-go line end:
-    edit.line_end()
-
 go way left:
     edit.line_start()
     edit.line_start()
