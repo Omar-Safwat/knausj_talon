@@ -1,14 +1,20 @@
 question [mark]: "?"
 (downscore | underscore): "_"
 double dash: "--"
+# Add symbol at end of line and then insert line below
+# From https://github.com/AndreasArvidsson/andreas-talon/blob/master/misc/keys/keys.talon#L28
+patch {user.symbol_key}:
+        edit.line_end()
+    "{symbol_key}"
+    edit.line_insert_down()
 (bracket | brack | left bracket): "{"
 (rbrack | are bracket | right bracket): "}"
 triple quote: "'''"
 (triple grave | triple back tick | gravy):
     insert("```")
 (dot dot | dotdot): ".."
-ellipses: "..."
-(comma and | spamma): ", "
+pebble: "..."
+spam: ", "
 plus: "+"
 arrow: "->"
 dub arrow: "=>"
