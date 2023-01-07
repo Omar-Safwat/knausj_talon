@@ -1,6 +1,14 @@
 tag: user.line_commands
 -
 #this defines some common line commands. More may be defined that are ide-specific.
+trip: edit.left()
+
+trip <number_small> times: user.left_n(number_small)
+
+hop: edit.right()
+
+hop <number_small> times: user.right_n(number_small)
+
 drain: edit.word_left()
 
 drain <number_small> times: user.words_left(number_small)

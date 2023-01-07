@@ -108,6 +108,8 @@ go recent [<user.text>]:
     sleep(250ms)
 go edit: user.vscode("workbench.action.navigateToLastEditLocation")
 
+next: user.vscode_and_wait("jumpToNextSnippetPlaceholder")
+
 # Bookmarks. Requires Bookmarks plugin
 go marks: user.vscode("workbench.view.extension.bookmarks")
 toggle mark: user.vscode("bookmarks.toggle")
