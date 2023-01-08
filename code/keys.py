@@ -230,7 +230,9 @@ simple_keys = [
 ]
 
 alternate_keys = {
+    "clap": "enter",
     "delete": "backspace",
+    "void": "space",
     "forward delete": "delete",
     #'junk': 'backspace',
     "page up": "pageup",

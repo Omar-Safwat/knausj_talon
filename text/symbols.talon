@@ -37,7 +37,12 @@ empty escaped string:
     key(left)
 (inside parens | args):
 	insert("()")
+	key(left)   
+
+inside (angle):
+	insert("<>")
 	key(left)
+
 inside (squares | square brackets | list):
 	insert("[]")
 	key(left)
