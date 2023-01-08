@@ -1,10 +1,12 @@
 tag: user.code_functions
 -
 ^funky <user.text>$: user.code_default_function(text)
+^class <user.text>$: user.code_class(text)
 ^pro funky <user.text>$: user.code_protected_function(text)
 ^pub funky <user.text>$: user.code_public_function(text)
 ^static funky <user.text>$: user.code_private_static_function(text)
 ^pro static funky <user.text>$: user.code_protected_static_function(text)
+^pub static funky <user.text>$: user.code_public_static_function(text)
 ^pub static funky <user.text>$: user.code_public_static_function(text)
 
 # for annotating function parameters

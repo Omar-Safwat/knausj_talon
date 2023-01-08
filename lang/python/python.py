@@ -18,6 +18,9 @@ ctx.lists["user.code_common_function"] = {
     "split": "split",
     "string": "str",
     "update": "update",
+    "tuple": "tuple",
+    "map": "map",
+    "absolute": "abs",
 }
 
 """a set of fields used in python docstrings that will follow the
@@ -173,6 +176,8 @@ class UserActions:
     def code_insert_is_not_null():                              actions.auto_insert(' is not None')
     def code_state_if():
         actions.user.insert_between('if ', ':')
+    def code_operator_lambda():
+        actions.user.insert('lambda ')
     def code_state_else_if():
         actions.user.insert_between('elif ', ':')
     def code_state_else():
@@ -195,7 +200,10 @@ class UserActions:
         actions.user.insert_between('(', ')')
     def code_insert_true():            actions.auto_insert('True')
     def code_insert_false():           actions.auto_insert('False')
-    def code_comment_documentation(): actions.user.insert_between('"""', '"""')
+    def code_comment_documentation(): 
+        actions.user.insert_between('"', '"')
+        actions.edit.right()
+        actions.insert('"')
     def code_insert_function(text: str, selection: str):
         text += f"({selection or ''})"
         actions.user.paste(text)
@@ -220,6 +228,16 @@ class UserActions:
         result = "def {}():".format(
             actions.user.formatted_text(
                 text, settings.get("user.code_public_function_formatter")
+            )
+        )
+        actions.user.paste(result)
+        actions.edit.left()
+        actions.edit.left()
+
+    def code_class(text: str):
+        result = "class {}():".format(
+            actions.user.formatted_text(
+                text, settings.get("user.code_class_formatter")
             )
         )
         actions.user.paste(result)

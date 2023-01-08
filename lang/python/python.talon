@@ -20,6 +20,7 @@ settings():
     user.code_private_function_formatter = "SNAKE_CASE"
     user.code_protected_function_formatter = "SNAKE_CASE"
     user.code_public_function_formatter = "SNAKE_CASE"
+    user.code_class_formatter = "PUBLIC_CAMEL_CASE"
     user.code_private_variable_formatter = "SNAKE_CASE"
     user.code_protected_variable_formatter = "SNAKE_CASE"
     user.code_public_variable_formatter = "SNAKE_CASE"
@@ -53,3 +54,5 @@ import <user.code_libraries>:
     key(end enter)
 
 from import: user.insert_between("from ", " import ")
+<user.operator> turner: user.insert_between("if ", " else ")
+<user.operator> lambda: "lambda "

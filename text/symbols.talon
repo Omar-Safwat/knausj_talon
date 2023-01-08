@@ -10,7 +10,7 @@ patch {user.symbol_key}:
 (bracket | brack | left bracket): "{"
 (rbrack | are bracket | right bracket): "}"
 triple quote: "'''"
-(triple grave | triple back tick | gravy):
+(triple grave | triple back tick | gravy | triple skies):
     insert("```")
 (dot dot | dotdot): ".."
 pebble: "..."
@@ -56,9 +56,8 @@ inside (quotes | string):
 	insert("''")
 	key(left)
 inside (double quotes | dubquotes):
-    insert('""')
-	key(left)
-inside (graves | back ticks):
+    user.insert_between('"', '"')
+inside (skis | back ticks):
 	insert("``")
 	key(left)
 angle that:

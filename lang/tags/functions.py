@@ -17,6 +17,8 @@ def code_type(m) -> str:
     return m.code_type
 
 
+setting_class_formatter = \
+    mod.setting("code_class_formatter", str)
 setting_private_function_formatter = \
     mod.setting("code_private_function_formatter", str)
 setting_protected_function_formatter = \
@@ -33,6 +35,9 @@ setting_public_variable_formatter = \
 @mod.action_class
 class Actions:
 
+    def code_class(text: str):
+        """Inserts class declaration"""        
+        
     def code_default_function(text: str):
         """Inserts function declaration"""
         actions.user.code_private_function(text)
@@ -60,6 +65,14 @@ class Actions:
         actions.insert(
             actions.user.formatted_text(
                 name, settings.get("user.code_private_function_formatter")
+            )
+        )
+
+    def code_class_formatter(name: str):
+        """inserts properly formatted class"""
+        actions.insert(
+            actions.user.formatted_text(
+                name, settings.get("user.code_class_formatter")
             )
         )
 
