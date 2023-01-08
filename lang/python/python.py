@@ -134,8 +134,8 @@ ctx.lists["user.python_exception"] = {
 
 @ctx.action_class("user")
 class UserActions:
-    def code_operator_subscript():
-        actions.user.insert_between('[', ']')
+    def code_operator_floor_division(): actions.auto_insert(' // ')
+    def code_operator_subscript(): actions.user.insert_between('[', ']')   
     def code_operator_assignment():                      actions.auto_insert(' = ')
     def code_operator_subtraction():                     actions.auto_insert(' - ')
     def code_operator_subtraction_assignment():          actions.auto_insert(' -= ')
@@ -191,7 +191,8 @@ class UserActions:
     def code_import():     actions.auto_insert('import ')
     def code_comment_line_prefix(): actions.auto_insert('# ')
     def code_state_return():
-        actions.insert('return ')
+        actions.insert('return')
+        actions.user.insert_between('(', ')')
     def code_insert_true():            actions.auto_insert('True')
     def code_insert_false():           actions.auto_insert('False')
     def code_comment_documentation(): actions.user.insert_between('"""', '"""')

@@ -26,6 +26,9 @@ class Actions:
     def code_operator_division():
         """code_operator_division"""
 
+    def code_operator_floor_division():
+        """code_operator_floor_division"""
+
     def code_operator_modulo():
         """code_operator_modulo"""
 

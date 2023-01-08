@@ -6,6 +6,7 @@ tag: user.code_operators_math
 <user.operator> (plus | add): user.code_operator_addition()
 <user.operator> (times | multiply): user.code_operator_multiplication()
 <user.operator> divide: user.code_operator_division()
+<user.operator> floor divide: user.code_operator_floor_division()
 <user.operator> mod: user.code_operator_modulo()
 (<user.operator> (power | exponent) | to the power [of]): user.code_operator_exponent()
 
