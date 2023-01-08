@@ -4,6 +4,33 @@ find it:
 next one:
     edit.find_next()
 
+trip: edit.left()
+
+trip <number_small> times: user.left_n(number_small)
+
+hop: edit.right()
+
+hop <number_small> times: user.right_n(number_small)
+
+drain: edit.word_left()
+
+drain <number_small> times: user.words_left(number_small)
+step: edit.word_right()
+
+step <number_small> times: user.words_right(number_small)
+
+north: user.up_n(1)
+
+north <number_small> times: user.up_n(number_small)
+
+south: user.down_n(1)
+
+south <number_small> times: user.down_n(number_small)
+
+tail: edit.line_end()
+
+head: edit.line_start()
+
 go way left:
     edit.line_start()
     edit.line_start()
@@ -80,36 +107,19 @@ select way down:
 clear line:
     edit.delete_line()
 
-clear left:
-    key(backspace)
+wiper: user.delete_word_left_n(1)
 
-clear right:
-    key(delete)
+wiper <number_small> times: user.delete_word_left_n(number_small)
 
-clear up:
-    edit.extend_line_up()
-    edit.delete()
+swallow: user.delete_word_right_n(1)
 
-clear down:
-    edit.extend_line_down()
-    edit.delete()
+swallow <number_small> times: user.delete_word_right_n(number_small)
 
-clear word:
-    edit.delete_word()
-
-(clear word left | redact):
-    edit.extend_word_left()
-    edit.delete()
-
-clear word right:
-    edit.extend_word_right()
-    edit.delete()
-
-clear way left:
+clear head:
     edit.extend_line_start()
     edit.delete()
 
-clear way right:
+clear tail:
     edit.extend_line_end()
     edit.delete()
 

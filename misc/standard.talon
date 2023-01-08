@@ -27,4 +27,4 @@ wipe: key(backspace)
 (pad | padding):
 	insert("  ")
 	key(left)
-slap: edit.line_insert_down()
+clap: edit.line_insert_down()

@@ -97,6 +97,7 @@ abbreviations = {
     "import table": "iat",
     "import address table": "iat",
     "increment": "inc",
+    "index": "idx",
     "information": "info",
     "initialize": "init",
     "initializer": "init",
