@@ -19,13 +19,13 @@ step: edit.word_right()
 
 step <number_small> times: user.words_right(number_small)
 
-north: user.up_n(1)
+up: user.up_n(1)
 
-north <number_small> times: user.up_n(number_small)
+up <number_small> times: user.up_n(number_small)
 
-south: user.down_n(1)
+down: user.down_n(1)
 
-south <number_small> times: user.down_n(number_small)
+down <number_small> times: user.down_n(number_small)
 
 tail: edit.line_end()
 

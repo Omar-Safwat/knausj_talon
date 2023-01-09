@@ -1,33 +1,6 @@
 tag: user.line_commands
 -
 #this defines some common line commands. More may be defined that are ide-specific.
-trip: edit.left()
-
-trip <number_small> times: user.left_n(number_small)
-
-hop: edit.right()
-
-hop <number_small> times: user.right_n(number_small)
-
-drain: edit.word_left()
-
-drain <number_small> times: user.words_left(number_small)
-step: edit.word_right()
-
-step <number_small> times: user.words_right(number_small)
-
-up: user.up_n(1)
-
-up <number_small> times: user.up_n(number_small)
-
-down: user.down_n(1)
-
-down <number_small> times: user.down_n(number_small)
-
-tail: edit.line_end()
-
-head: edit.line_start()
-
 go <number>: edit.jump_line(number)
 go <number> end:
     edit.jump_line(number)
