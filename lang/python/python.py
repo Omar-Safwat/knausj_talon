@@ -21,6 +21,8 @@ ctx.lists["user.code_common_function"] = {
     "tuple": "tuple",
     "map": "map",
     "absolute": "abs",
+    "men": "min",
+    "max": "max",
 }
 
 """a set of fields used in python docstrings that will follow the
